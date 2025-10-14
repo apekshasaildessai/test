@@ -1,0 +1,398 @@
+/* Credora Capital Presentation Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.presentation-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: linear-gradient(135deg, #3c3c3c 0%, #2c2c2c 100%);
+    border: 2px solid #D4AF37;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide.active {
+    display: block;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-content {
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Slide Styles */
+.title-slide {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #3c3c3c 0%, #2c2c2c 70%, #1a1a1a 100%);
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.main-logo {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(212, 175, 55, 0.5));
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: #D4AF37;
+    font-weight: 500;
+}
+
+/* Regular Slide Header */
+.slide-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 15px;
+}
+
+.header-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.slide-header h2 {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    font-weight: 400;
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.content-area h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.content-area h4 {
+    font-size: 1.4rem;
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.content-area h5 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Bullet Points */
+.bullet-points {
+    margin: 20px 0;
+}
+
+.bullet-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.bullet {
+    color: #D4AF37;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.bullet-item span:last-child {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.info-item {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #D4AF37;
+}
+
+.info-label {
+    font-size: 1rem;
+    color: #D4AF37;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+/* Strategy Columns */
+.strategy-section {
+    margin: 20px 0;
+}
+
+.strategy-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.strategy-column {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+    color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Objective Grid */
+.objective-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.objective-item {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.objective-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+}
+
+.objective-item h4 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.objective-item p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Market Stats */
+.market-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+    color: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Navigation */
+.navigation {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(60, 60, 60, 0.9);
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid #D4AF37;
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.nav-btn:disabled {
+    background: #666;
+    color: #999;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.slide-counter {
+    color: #D4AF37;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide {
+        width: 95%;
+        height: 85vh;
+    }
+    
+    .slide-content {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .info-grid,
+    .objective-grid,
+    .strategy-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-stats {
+        flex-direction: column;
+    }
+    
+    .navigation {
+        bottom: 20px;
+        padding: 10px 20px;
+    }
+    
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .slide {
+        display: block !important;
+        page-break-after: always;
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+    
+    .navigation {
+        display: none;
+    }
+}
